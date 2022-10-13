@@ -1,5 +1,8 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aplikacja extends JFrame implements ActionListener {
     public Aplikacja() {
         setTitle("Panstwa i Miasta");
@@ -15,7 +18,6 @@ public class Aplikacja extends JFrame implements ActionListener {
         JMenuItem menuItem15 = new JMenuItem("off");
         JMenuItem menuItem16 = new JMenuItem("wyjdz");
 
-
         menuItem11.addActionListener(this);
         menu1.add(menuItem11);
         menuItem12.addActionListener(this);
@@ -29,57 +31,12 @@ public class Aplikacja extends JFrame implements ActionListener {
         menuItem16.addActionListener(this);
         menu1.add(menuItem16);
 
-        JMenuItem menuItem21 = new JMenuItem("Pozycja 1");
-        JMenuItem menuItem22 = new JMenuItem("Pozycja 2");
-        JMenuItem menuItem23 = new JMenuItem("Panstwo 3" );
-        JMenuItem menuItem24 = new JMenuItem("Panstwo 4" );
-        JMenuItem menuItem25 = new JMenuItem("Panstwo 5" );
-        JMenuItem menuItem26 = new JMenuItem("Panstwo 6" );
-        JMenuItem menuItem27 = new JMenuItem("Panstwo 7" );
-        JMenuItem menuItem28 = new JMenuItem("Panstwo 8" );
-        JMenuItem menuItem29 = new JMenuItem("Panstwo 9" );
-        JMenuItem menuItem210 = new JMenuItem("Panstwo 10" );
-
-        menuItem21.addActionListener(this);
-        menuItem22.addActionListener(this);
-
-        menu2.add(menuItem21);
-        menu2.add(menuItem22);
-        menu2.add(menuItem23);
-        menu2.add(menuItem24);
-        menu2.add(menuItem25);
-        menu2.add(menuItem26);
-        menu2.add(menuItem27);
-        menu2.add(menuItem28);
-        menu2.add(menuItem29);
-        menu2.add(menuItem210);
-
-        JMenuItem menuItem31 = new JMenuItem("Stolica 1");
-        JMenuItem menuItem32 = new JMenuItem("Stolica 2");
-        JMenuItem menuItem33 = new JMenuItem("Stolica 3");
-        JMenuItem menuItem34 = new JMenuItem("Stolica 4");
-        JMenuItem menuItem35 = new JMenuItem("Stolica 5");
-        JMenuItem menuItem36 = new JMenuItem("Stolica 6");
-        JMenuItem menuItem37 = new JMenuItem("Stolica 7");
-        JMenuItem menuItem38 = new JMenuItem("Stolica 8");
-        JMenuItem menuItem39 = new JMenuItem("Stolica 9");
-        JMenuItem menuItem310 = new JMenuItem("Stolica 10");
-
-
-        menu3.add(menuItem31);
-        menu3.add(menuItem32);
-        menu3.add(menuItem33);
-        menu3.add(menuItem34);
-        menu3.add(menuItem35);
-        menu3.add(menuItem36);
-        menu3.add(menuItem37);
-        menu3.add(menuItem38);
-        menu3.add(menuItem39);
-        menu3.add(menuItem310);
-
-        menuItem31.addActionListener(this);
-        menuItem32.addActionListener(this);
-        menuItem33.addActionListener(this);
+        for(int i = 1 ; i < 11 ; i++){
+            menu1
+            menu2.add(new JMenuItem("Panstwo "+i));
+            menu2.getItem(i-1).addActionListener(this);
+            menu3.add(new JMenuItem("Stolica "+i));
+        }
 
         menuBar.add(menu1);
         menuBar.add(menu2);
