@@ -1,0 +1,10 @@
+Polska;warszawa
+Francja;paryz
+Niemcy;Berlin
+Japonia;Tokio
+Hiszpania;Madryt
+Brazylia;Brasil
+Norwegia;Oslo
+Chiny;Pekin
+Szwecja;Sztokholm
+Rosja;Moskwa
