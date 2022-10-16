@@ -1,7 +1,6 @@
 public class Main {
     public static void main(String[] args) {
         Aplikacja a = new Aplikacja();
-        LogicController lg = new LogicController();
     }
 }
 
