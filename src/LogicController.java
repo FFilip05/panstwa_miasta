@@ -8,7 +8,7 @@ public class LogicController {
     private int punkty = 0;
     private int i = 0;
 
-    public String stolica;
+    private String panstwo;
 
     public String[] a1;
 
@@ -39,6 +39,13 @@ public class LogicController {
         this.i = i;
     }
 
+    public String getPanstwo() {
+        return panstwo;
+    }
+
+    public void setPanstwo(String panstwo) {
+        this.panstwo = panstwo;
+    }
 
     public List<String> getAnswers() {
         List<String> lista = new ArrayList<>();
@@ -61,16 +68,16 @@ public class LogicController {
 
         if (getI() % 2 == 1) {
 
-            if (ans.equals(getAnswerValue(stolica))) {
+            if (ans.equals(getAnswerValue(getPanstwo()))) {
                 setPunkty(getPunkty() + 1);
                 System.out.println("Twoja liczba punktyow to : " + getPunkty());
 
             } else {
-                System.out.println("Zła odpowiedz");
+                System.out.println("Zła odpowiedz, tracisz wszystkie punkty");
                 setPunkty(0);
             }
         } else {
-            stolica = ans;
+            setPanstwo(ans);
         }
         setI(getI() + 1);
         if (getI() == 2) {
@@ -81,5 +88,4 @@ public class LogicController {
     public String getFileName() {
         return "a.txt";
     }
-
 }

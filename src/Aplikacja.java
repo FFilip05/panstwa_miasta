@@ -56,7 +56,7 @@ public class Aplikacja extends JFrame implements ActionListener {
                 getMenu3().add(new JMenuItem(a[1]));
                 getMenu3().getItem(i).addActionListener(this);
             }
-//            Collections.shuffle(panstwa_stolice);
+//            Collections.shuffle(panstwa_stolice);s
         } catch (Exception e) {
             e.printStackTrace();
         }
