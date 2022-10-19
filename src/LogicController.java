@@ -10,7 +10,7 @@ public class LogicController {
 
     private String panstwo;
 
-    public String[] a1;
+    public String[] splitIntoCountrysAndCapitals;
 
     public String getAnswerValue(String key) {
         return this.ANSWERS.get(key);
@@ -54,8 +54,8 @@ public class LogicController {
             for (String x : fileService.getListOfAnswers()
             ) {
                 lista.add(x);
-                a1 = x.split(";");
-                ANSWERS.put(a1[0], a1[1]);
+                splitIntoCountrysAndCapitals = x.split(";");
+                ANSWERS.put(splitIntoCountrysAndCapitals[0], splitIntoCountrysAndCapitals[1]);
             }
             fileService.close();
         } catch (Exception e) {
