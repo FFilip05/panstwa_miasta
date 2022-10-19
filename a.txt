@@ -1,5 +1,5 @@
-Polska;warszawa
-Francja;paryz
+Polska;Warszawa
+Francja;Paryz
 Niemcy;Berlin
 Japonia;Tokio
 Hiszpania;Madryt
